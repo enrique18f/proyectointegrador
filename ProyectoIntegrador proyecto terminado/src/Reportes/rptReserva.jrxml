@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="rptReserva" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7c2cb4e3-ded8-48b8-83f5-8cc1448f8277">
+	<property name="ireport.zoom" value="1.5"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[SELECT
+     reservacion.`CODIGO` AS reservacion_CODIGO,
+     reservacion.`ID_EMPLEADO` AS reservacion_ID_EMPLEADO,
+     reservacion.`ID_CLIENTE` AS reservacion_ID_CLIENTE,
+     reservacion.`CATEGORIA_HABITACION` AS reservacion_CATEGORIA_HABITACION,
+     reservacion.`ID_NUMHABITACION` AS reservacion_ID_NUMHABITACION,
+     reservacion.`ID_TIPODEPAGO` AS reservacion_ID_TIPODEPAGO,
+     reservacion.`FECHA_RESERVACION` AS reservacion_FECHA_RESERVACION,
+     reservacion.`FECHA_INGRESO` AS reservacion_FECHA_INGRESO,
+     reservacion.`FECHA_SALIDA` AS reservacion_FECHA_SALIDA,
+     reservacion.`MONTO_PAGO` AS reservacion_MONTO_PAGO
+FROM
+     `reservacion` reservacion]]>
+	</queryString>
+	<field name="reservacion_CODIGO" class="java.lang.Integer"/>
+	<field name="reservacion_ID_EMPLEADO" class="java.lang.String"/>
+	<field name="reservacion_ID_CLIENTE" class="java.lang.Integer"/>
+	<field name="reservacion_CATEGORIA_HABITACION" class="java.lang.String"/>
+	<field name="reservacion_ID_NUMHABITACION" class="java.lang.String"/>
+	<field name="reservacion_ID_TIPODEPAGO" class="java.lang.String"/>
+	<field name="reservacion_FECHA_RESERVACION" class="java.sql.Date"/>
+	<field name="reservacion_FECHA_INGRESO" class="java.sql.Date"/>
+	<field name="reservacion_FECHA_SALIDA" class="java.sql.Date"/>
+	<field name="reservacion_MONTO_PAGO" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="216" y="0" width="100" height="34" uuid="2ca66154-85d1-420a-8394-a33efa97d1ff"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[Hotel CEBA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="0" width="100" height="36" uuid="d3078a39-4152-4652-a87f-e07e5ad5ce29"/>
+				<textElement>
+					<font size="18"/>
+				</textElement>
+				<text><![CDATA[S.A.C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="36" width="100" height="20" uuid="897f38bd-e1d6-4eb3-8c75-e342a9753f56"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Pp.San Juan]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="216" y="56" width="240" height="20" uuid="0abef877-4402-48f8-a0ac-49573e678947"/>
+				<textElement>
+					<font size="12"/>
+				</textElement>
+				<text><![CDATA[Teléfono:962549632 www.hotelceba.info]]></text>
+			</staticText>
+			<image>
+				<reportElement x="47" y="0" width="132" height="76" uuid="ec1de574-3af5-460f-b788-864ab94b2519"/>
+				<imageExpression><![CDATA["C:\\Users\\User\\Documents\\NetBeansProjects\\ProyectoIntegrador-2022\\src\\Imagenes\\reser.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="35" splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="41" height="20" uuid="887097e7-0c72-4543-ade9-076a24607a65"/>
+				<text><![CDATA[Codigo]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="41" y="0" width="71" height="20" uuid="0dbf9475-af2d-48f1-ab14-c029f50eb52a"/>
+				<text><![CDATA[ID Empleado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="112" y="0" width="56" height="20" uuid="de71b9e9-2159-4790-80fc-47b3e60f3daa"/>
+				<text><![CDATA[ID Cliente]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="168" y="0" width="76" height="20" uuid="adb77f31-6adc-453c-9ef0-6472564267ec"/>
+				<text><![CDATA[Cat Habitacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="244" y="0" width="83" height="20" uuid="1e454ce9-abf4-43a8-bcd5-48cbd673fd2c"/>
+				<text><![CDATA[Num Habitacion]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="0" width="100" height="20" uuid="b097d752-ce63-457b-8f78-c9ff9ada92f7"/>
+				<text><![CDATA[Fecha Reserva]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="427" y="0" width="100" height="20" uuid="ca7ab5a0-a5ac-4d83-8f08-0c935553a421"/>
+				<text><![CDATA[Fecha Ingreso]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="527" y="0" width="100" height="20" uuid="cdf309b0-5725-411a-a705-124eae354805"/>
+				<text><![CDATA[Fecha Salida]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="627" y="0" width="100" height="20" uuid="ea1f33ce-6cfb-4c65-8423-aa498903d8db"/>
+				<text><![CDATA[Tipo de Pago]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="727" y="0" width="75" height="20" uuid="ce970baf-e120-44a0-a5a2-5e7f30b41f12"/>
+				<text><![CDATA[Monto de Pago]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="27" width="41" height="20" uuid="4f69cbb2-8186-4275-b495-4e5b55764e7f"/>
+				<textFieldExpression><![CDATA[$F{reservacion_CODIGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="41" y="27" width="71" height="20" uuid="ffc4c731-2ea2-4043-95db-5786acced4fb"/>
+				<textFieldExpression><![CDATA[$F{reservacion_ID_EMPLEADO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="112" y="27" width="56" height="20" uuid="5e8444e1-3614-4d61-9cd2-9c7611be24ce"/>
+				<textFieldExpression><![CDATA[$F{reservacion_ID_CLIENTE}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="168" y="27" width="76" height="20" uuid="d865284a-276a-49c0-8023-1244dcc87475"/>
+				<textFieldExpression><![CDATA[$F{reservacion_CATEGORIA_HABITACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="27" width="40" height="20" uuid="93e72a9c-b41b-495a-a32a-1d35f307aab2"/>
+				<textFieldExpression><![CDATA[$F{reservacion_ID_NUMHABITACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="327" y="27" width="100" height="20" uuid="c65cf3d3-045d-44f9-b4ba-4ef6831ff3d2"/>
+				<textFieldExpression><![CDATA[$F{reservacion_FECHA_RESERVACION}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="427" y="27" width="100" height="20" uuid="28d36565-cf9e-413d-97f4-38b8cf4b518e"/>
+				<textFieldExpression><![CDATA[$F{reservacion_FECHA_INGRESO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="527" y="27" width="100" height="20" uuid="fa55b7c3-38d4-4579-a39d-8c07429905b2"/>
+				<textFieldExpression><![CDATA[$F{reservacion_FECHA_SALIDA}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="627" y="27" width="100" height="20" uuid="acda52bf-f1ec-4e6a-a6d8-3a8ce32d1d72"/>
+				<textFieldExpression><![CDATA[$F{reservacion_ID_TIPODEPAGO}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="747" y="27" width="55" height="20" uuid="be394506-2b9b-45ed-98d7-fad335ba284d"/>
+				<textFieldExpression><![CDATA[$F{reservacion_MONTO_PAGO}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="727" y="27" width="20" height="20" uuid="19c6137b-77dd-4bf0-9ccf-d380bc155b80"/>
+				<text><![CDATA[S/]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
